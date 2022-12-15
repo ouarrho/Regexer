@@ -10,3 +10,7 @@ Examples:
 RegEx: /abc/ match any string contains 'abc'
 
 Regexer: SELECT 'abc'
+
+RegEx: /abc/g match any string contains 'abc'
+
+Regexer: SELECT ALL 'abc'
