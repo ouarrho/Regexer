@@ -6,3 +6,7 @@ Writing regular expression is a big headache, but with Regexer you can write you
 With Regexer you can write your Regular Expression like SQL statement.
 
 Examples:
+
+RegEx: /abc/ match any string contains 'abc'
+
+Regexer: SELECT 'abc'
