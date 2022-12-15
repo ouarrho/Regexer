@@ -7,10 +7,14 @@ With Regexer you can write your Regular Expression like SQL statement.
 
 Examples:
 
-RegEx: /abc/ match any string contains 'abc'
+RegEx: /abc/
 
 Regexer: SELECT 'abc'
 
-RegEx: /abc/g match any string contains 'abc'
+RegEx: /^abc/
+
+Regexer: SELECT 'abc' IN BEGINNING
+
+RegEx: /abc/g
 
 Regexer: SELECT ALL 'abc'
