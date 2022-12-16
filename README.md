@@ -13,7 +13,11 @@ Regexer: SELECT 'abc'
 
 RegEx: /^abc/
 
-Regexer: SELECT 'abc' IN BEGINNING
+Regexer: SELECT 'abc' AT BEGINNING
+
+RegEx: /abc$/
+
+Regexer: SELECT 'abc' AT END
 
 RegEx: /abc/g
 
