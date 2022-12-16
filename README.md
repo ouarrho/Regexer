@@ -19,6 +19,10 @@ RegEx: /abc$/
 
 Regexer: SELECT 'abc' AT END
 
+RegEx: /ab(?= c)/;
+
+Regexer: SELECT 'ab' FOLLOWED BY 'c'
+
 RegEx: /abc/g
 
 Regexer: SELECT ALL 'abc'
