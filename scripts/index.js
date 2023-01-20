@@ -1,55 +1,24 @@
-console.log('hello')
+// SELECT "abc" AT BEGINENING
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-/**
-	*	Lexing
-	*	
-	* INSERT
-	* SELECT
-	* UPDATE
-	* DELETE
-	*
-	* AS
-	* 
-	* FROM
-	*
-	* WHERE
-	* 
-	* THIS
-	* NOT
-	* AND
-	* OR
-	* XOR
-	* IN
-	* AT
-	* OF
-	* LIKE
-	* 
-	* 
-	* BEGINNING
-	* END
-	* FOLLOWED
-	* BETWEEN
-	* ALL
-	* GROUP
-	* BY
-	* ORDER
-	* LIMIT
-	* LINE
-	* WORD
-	* 
-*/
+function newQuery(){
+	readline.question('tap your query: ', query => {
+		if( query === 'exit' ){ 
+			readline.close(); 
+			return; 
+		}
 
-/**
-	* RegEx: /abc/
-	* Regexer: SELECT 'abc'
-	* RegEx: /^abc/
-	* Regexer: SELECT 'abc' AT BEGINNING
-	* RegEx: /abc$/
-	* Regexer: SELECT 'abc' AT END
-	* RegEx: /ab(?= c)/;
-	* Regexer: SELECT 'ab' FOLLOWED BY 'c'
-	* RegEx: /(?<=")(abc)(?=")/
-	* Regexer: SELECT 'abc' BETWEEN '"'
-	* RegEx: /abc/g
-	* Regexer: SELECT ALL 'abc'
-*/
+		const queryReplace = query.replace(/(\r\n|\n|\r)/gm, ' ');
+		const querySplit   = queryReplace.split(/ (?=(?:(?:[^"]*"){2})*[^"]*$)/);
+		const queryFilter  = querySplit.filter(i => { return i.trim() != '' });
+		
+		queryFilter.forEach( v => { console.log( v.trim() ); });
+
+		newQuery();
+	});
+}
+
+newQuery();
