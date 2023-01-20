@@ -1,0 +1,10 @@
+
+/**
+  * Layouts
+*/
+  @import 'layouts/app.css';
+  @import 'layouts/nav.css';
+  @import 'layouts/menu.css';
+  @import 'layouts/bag.css';
+  @import 'layouts/main.css';
+  @import 'layouts/footer.css';

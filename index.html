@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Regexer</title>
+
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+</head>
+<body>
+
+	<header>
+		<div style="width: 90%;max-width: 40rem;margin: 1rem auto;">
+			<h1>Regexer</h1>
+		</div>
+	</header>
+
+	<main>
+		<div style="width: 90%;max-width: 40rem;margin: auto;overflow: hidden;">
+			<textarea style="height: 12rem;font-size: 1.2rem;font-weight: 500;" placeholder="tap your code..."></textarea>
+			<button style="float: right;" class="btn">compile</button>
+		</div>
+	</main>
+
+	<script type="text/javascript">
+		const date = new Date();
+		const time = date.getTime();
+		let script = document.createElement('script');
+		script.src = `scripts/index.js?v=${time}`;
+		document.getElementsByTagName( 'body' )[ 0 ].appendChild( script );
+	</script>
+
+</body>
+</html>
